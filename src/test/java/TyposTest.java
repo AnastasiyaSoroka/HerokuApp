@@ -1,24 +1,8 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TyposTest {
-    WebDriver driver;
-    ReadUrlFileData url = new ReadUrlFileData();
-
-    @BeforeMethod
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(false);
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-    }
+public class TyposTest extends Settings {
 
     @Test
     public void checkTyposTextTest() {
@@ -28,10 +12,4 @@ public class TyposTest {
         String expected = "Sometimes you'll see a typo, other times you won't";
         Assert.assertTrue(expected.equals(result), "Text has typos");
     }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
-
 }
