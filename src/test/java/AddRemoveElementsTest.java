@@ -33,9 +33,7 @@ public class AddRemoveElementsTest {
         WebElement btnDelete = driver.findElement(By.xpath("//button[text()='Delete']"));
         btnDelete.click();
         int buttonCount = driver.findElements(By.tagName("button")).size();
-        Assert.assertEquals(buttonCount, 2);
-
-
+        Assert.assertEquals(buttonCount, 2, "The number of elements should be 2. ");
     }
 
 

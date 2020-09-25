@@ -31,7 +31,7 @@ public class TyposTest {
 
     @AfterMethod
     public void tearDown() {
-         driver.quit();
+        driver.quit();
     }
 
 }

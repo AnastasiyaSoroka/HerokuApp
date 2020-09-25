@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -41,10 +42,10 @@ public class SortableDataTableTest {
 
         Collections.sort(result);
 
-        Assert.assertEquals(result.get(0), "Bach");
-        Assert.assertEquals(result.get(1), "Conway");
-        Assert.assertEquals(result.get(2), "Doe");
-        Assert.assertEquals(result.get(3), "Smith");
+        Assert.assertEquals(result.get(0), "Bach", "First line should contain Bach value");
+        Assert.assertEquals(result.get(1), "Conway", "First line should contain Conway value");
+        Assert.assertEquals(result.get(2), "Doe", "First line should contain Doe value");
+        Assert.assertEquals(result.get(3), "Smith", "First line should contain Smith value");
 
     }
 

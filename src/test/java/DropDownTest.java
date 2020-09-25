@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.Select;
+
 import java.util.List;
 
 public class DropDownTest {
@@ -39,10 +40,10 @@ public class DropDownTest {
         Assert.assertTrue(counterBoolean, "There should be some options in the dropdown");
 
         dropDown.selectByIndex(1);
-        Assert.assertEquals(dropDown.getFirstSelectedOption().getText(), "Option 1");
+        Assert.assertEquals(dropDown.getFirstSelectedOption().getText(), "Option 1", "Option 1 should be selected.");
 
         dropDown.selectByIndex(2);
-        Assert.assertEquals(dropDown.getFirstSelectedOption().getText(), "Option 2");
+        Assert.assertEquals(dropDown.getFirstSelectedOption().getText(), "Option 2", "Option 2 should be selected.");
 
     }
 

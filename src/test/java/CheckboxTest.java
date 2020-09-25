@@ -29,12 +29,12 @@ public class CheckboxTest {
 
         driver.get(url.returnURL("url_checkboxes"));
         List<WebElement> checkboxes = driver.findElements(By.tagName("input"));
-        Assert.assertFalse(checkboxes.get(0).isSelected(),"Checkbox 1 should NOT be selected");
+        Assert.assertFalse(checkboxes.get(0).isSelected(), "Checkbox 1 should NOT be selected");
         checkboxes.get(0).click();
-        Assert.assertTrue(checkboxes.get(0).isSelected(),"Checkbox 1 should be selected");
-        Assert.assertTrue(checkboxes.get(1).isSelected(),"Checkbox 2 should NOT be selected");
+        Assert.assertTrue(checkboxes.get(0).isSelected(), "Checkbox 1 should be selected");
+        Assert.assertTrue(checkboxes.get(1).isSelected(), "Checkbox 2 should NOT be selected");
         checkboxes.get(1).click();
-        Assert.assertFalse(checkboxes.get(1).isSelected(),"Checkbox 2 should NOT be selected");
+        Assert.assertFalse(checkboxes.get(1).isSelected(), "Checkbox 2 should NOT be selected");
     }
 
     @AfterMethod
