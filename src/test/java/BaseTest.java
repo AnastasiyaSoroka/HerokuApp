@@ -4,10 +4,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class Settings {
+public class BaseTest {
 
     WebDriver driver;
-    ReadUrlFileData url = new ReadUrlFileData();
+    public final String URL = "http://the-internet.herokuapp.com/";
 
     @BeforeMethod
     public void setup() {

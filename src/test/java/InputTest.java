@@ -4,12 +4,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InputTest extends Settings {
+public class InputTest extends BaseTest {
+
+    private String endpoint = "inputs";
 
     @Test
     public void checkInputDifferentValuesKeysTest() {
 
-        driver.get(url.returnURL("url_inputs"));
+        driver.get(URL + endpoint);
         WebElement input = driver.findElement(By.tagName("input"));
         input.sendKeys("2");
         input.sendKeys(Keys.ARROW_UP);

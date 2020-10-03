@@ -6,12 +6,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class DropDownTest extends Settings{
+public class DropDownTest extends BaseTest {
+
+    private String endpoint = "dropdown";
 
     @Test
     public void checkCheckboxSelectionTest() {
 
-        driver.get(url.returnURL("url_dropdown"));
+        driver.get(URL + endpoint);
         Select dropDown = new Select(driver.findElement(By.id("dropdown")));
         List<WebElement> dropDownOptions = dropDown.getOptions();
         boolean counterBoolean = false;
