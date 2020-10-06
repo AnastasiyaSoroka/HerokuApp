@@ -5,12 +5,14 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class CheckboxTest extends Settings{
+public class CheckboxTest extends BaseTest {
+
+    private String endpoint = "checkboxes";
 
     @Test
     public void checkCheckboxSelectionTest() {
 
-        driver.get(url.returnURL("url_checkboxes"));
+        driver.get(URL + endpoint);
         List<WebElement> checkboxes = driver.findElements(By.tagName("input"));
         Assert.assertFalse(checkboxes.get(0).isSelected(), "Checkbox 1 should NOT be selected");
         checkboxes.get(0).click();

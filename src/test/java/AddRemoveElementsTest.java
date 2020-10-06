@@ -3,12 +3,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AddRemoveElementsTest extends Settings{
+public class AddRemoveElementsTest extends BaseTest {
+
+    private String endpoint = "add_remove_elements/";
 
     @Test
     public void checkElementsTest() {
 
-        driver.get(url.returnURL("url_add_remove_elements"));
+        driver.get(URL + endpoint);
 
         WebElement btnAdd = driver.findElement(By.xpath("//button[text()='Add Element']"));
         btnAdd.click();

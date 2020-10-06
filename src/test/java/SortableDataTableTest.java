@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SortableDataTableTest extends Settings {
+public class SortableDataTableTest extends BaseTest {
+
+    private String endpoint = "tables";
 
     @Test
     public void checkLastNamesTest() {
 
-        driver.get(url.returnURL("url_tables"));
+        driver.get(URL+endpoint);
         List<WebElement> rows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
 
         System.out.println(rows.size());
